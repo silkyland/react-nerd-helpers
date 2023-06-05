@@ -1,5 +1,5 @@
 import React from 'react'
-import './nerd-loading.scss'
+import '../../scss/nerd-loading.scss'
 
 /**
  * This is the default loading spinner component used when no custom spinner is provided.

@@ -1,33 +1,24 @@
 import { useState } from 'react'
-import './App.css'
-import NerdError from '../../dist/error/nerd-error'
+import { NerdLoading, NerdError } from '../../dist'
+import React from 'react'
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState<Error>(new Error('Error'))
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<Error | null>(new Error('Test Error'))
 
   return (
-    <div>
-      <h2>Loading example</h2>
-      {/* <NerdLoading visible={isLoading} message="Loading, please wait..." /> */}
-
-      <button onClick={() => setIsLoading(!isLoading)}>Toggle loading</button>
-
+    <>
+      <button onClick={() => setLoading(!loading)}>Toggle Loading</button>
+      <NerdLoading />
       <hr />
-
-      <h2>Error example</h2>
+      <button onClick={() => setError(new Error('Test Error'))}>
+        Set Error
+      </button>
       <NerdError
-        error={error}
-        onDismissed={() => setError(new Error('Error'))}
-        title="Error"
-        delayTime={5000}
-        shouldDelay={true}
-        backgroundColor="#ff0000"
-        borderColor="#ff0000"
-        textColor="#ffffff"
-        customMessage="This is a custom error message."
+        error={error!}
+        onDismissed={() => setError(new Error('Test Error'))}
       />
-    </div>
+    </>
   )
 }
 

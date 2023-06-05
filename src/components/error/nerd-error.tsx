@@ -4,8 +4,9 @@
  * @module NerdError
  */
 
-import React, { useEffect } from 'react'
-import './nerd-error.scss'
+import React from 'react'
+import { useEffect } from 'react'
+import '../../scss/nerd-error.scss'
 
 /**
  * Props for the NerdError component.

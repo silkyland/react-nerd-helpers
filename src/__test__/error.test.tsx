@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
-import NerdError from '../error/nerd-error'
+import NerdError from '../components/error/nerd-error'
 
 describe('NerdError', () => {
   const error = new Error('Test error')

@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react'
 import React from 'react'
-import NerdLoading from '../loading/nerd-loading'
+import NerdLoading from '../components/loading/nerd-loading'
 
 describe('NerdLoading', () => {
   it('renders with default props', () => {
     const { getByText } = render(<NerdLoading />)
-    expect(getByText('กำลังโหลด...')).toBeInTheDocument()
+    expect(getByText('Loading...')).toBeInTheDocument()
   })
 
   it('renders with custom message', () => {
@@ -21,6 +21,6 @@ describe('NerdLoading', () => {
 
   it('does not render when visible prop is false', () => {
     const { queryByText } = render(<NerdLoading visible={false} />)
-    expect(queryByText('กำลังโหลด...')).not.toBeInTheDocument()
+    expect(queryByText('Loading...')).not.toBeInTheDocument()
   })
 })
