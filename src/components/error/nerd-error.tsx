@@ -6,7 +6,7 @@
 
 import React from 'react'
 import { useEffect } from 'react'
-import './nerd-error.scss'
+import '../../scss/nerd-error.scss'
 
 /**
  * Props for the NerdError component.
