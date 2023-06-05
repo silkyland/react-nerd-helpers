@@ -1,7 +1,10 @@
 import React from 'react'
-import './style.css'
 import './nerd-loading.scss'
 
+/**
+ * This is the default loading spinner component used when no custom spinner is provided.
+ * It's an animated SVG element.
+ */
 const DefaultSpinner = (
   <svg
     className="nerd-loading__spinner-icon"
@@ -24,21 +27,37 @@ const DefaultSpinner = (
   </svg>
 )
 
+/**
+ * Interface for the NerdLoadingProps.
+ * Props for the NerdLoading component.
+ *
+ * @param {string} message - Custom loading message to be displayed. Default value is 'กำลังโหลด...'.
+ * @param {boolean} visible - Controls whether the loading component should be visible or not. Default value is true.
+ * @param {React.ReactNode} spinner - Element for a custom spinner component. By default, uses an SVG spinner provided within NerdLoading.
+ */
 interface NerdLoadingProps {
-  message?: string
-  visible?: boolean
-  spinner?: React.ReactNode
+  message?: string // Custom loading message.
+  visible?: boolean // Whether or not the loading spinner is visible.
+  spinner?: React.ReactNode // Custom spinner component.
 }
 
+/**
+ * This is the main NerdLoading component.
+ * It renders a loading spinner with a custom message.
+ * The visibility of the spinner and the spinner itself can be customized.
+ * @module NerdLoading
+ */
 const NerdLoading: React.FC<NerdLoadingProps> = ({
-  message = 'กำลังโหลด...',
-  visible = true,
-  spinner = DefaultSpinner,
+  message = 'กำลังโหลด...', // Default loading message.
+  visible = true, // Default visibility.
+  spinner = DefaultSpinner, // Default spinner component.
 }) => {
+  // If not visible, render nothing.
   if (!visible) {
     return null
   }
 
+  // If visible, render the loading spinner.
   return (
     <div className="fixed top-0 left-0 bottom-0 right-0 flex items-center justify-center">
       <div className="modal-overlay absolute top-0 left-0 bottom-0 right-0"></div>

@@ -1,34 +1,78 @@
-# npm-react-typescript-template
+# React Nerd Helpers
 
-A template for publishing a React + TypeScript package to npm
+React Nerd Helpers is a React-based library that provides a set of common UI helpers such as loading and error handling for your applications.
 
-## How to use
+## Installation
 
-Fork this repo, clone it to your local computer, and edit the `package.json` along with every other required file to match your project.
-Write the code for your package in TypeScript and Sass, compile it, and publish it to [npm](https://npmjs.com).
+You can install the React Nerd Helpers library via npm:
 
-To compile your code once, run
+```bash
+npm install @silkyland/react-nerd-helpers
+```
 
-- `npm run build`.
+or yarn:
 
-To compile your code once and refresh on file change, run
+```bash
+yarn add @silkyland/react-nerd-helpers
+```
 
-- `npm run start`.
+## Components
 
-To publish your package to npm, make sure you're logged in the correct account by running
+The library currently includes the following components:
 
-- `npm login`.
+- NerdLoading: A loading spinner component.
+- NerdError: An error display component.
 
-Compile your package by running
+## Usage
 
-- `npm run build`
+Below are examples of how to use the `NerdLoading` and `NerdError` components.
 
-Update the package version accordingly by using
+### NerdLoading
 
-- [`npm version [patch | minor | major]`](https://docs.npmjs.com/about-semantic-versioning)
+```tsx
+import { NerdLoading } from '@silkyland/react-nerd-helpers'
 
-Then publish your package by running
+function App() {
+  const [isLoading, setIsLoading] = React.useState(true)
 
-- `npm publish`
+  return (
+    <div>
+      <NerdLoading visible={isLoading} message="Loading, please wait..." />
+      {/* Your application code */}
+    </div>
+  )
+}
+```
 
-### Happy Building ♡
+### NerdError
+
+```tsx
+import { NerdError } from '@silkyland/react-nerd-helpers'
+
+function App() {
+  const [error, setError] = React.useState(null)
+
+  return (
+    <div>
+      {error && (
+        <NerdError
+          error={error}
+          onDismissed={() => setError(null)}
+          title="Oops, something went wrong!"
+        />
+      )}
+      {/* Your application code */}
+    </div>
+  )
+}
+```
+
+## Contributing
+
+If you have any suggestions or find any bugs, please file an issue on the GitHub page.
+
+<a href="https://github.com/silkyland/react-nerd-helpers">Github Repository</a>
+
+## License
+
+React Nerd Helpers is released under the MIT License.
