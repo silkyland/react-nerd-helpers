@@ -1,0 +1,36 @@
+/* nerd-error.css */
+.nerd-error {
+  position: relative;
+  padding: 1em;
+  border-radius: 1em;
+  margin: 1em 0;
+  border: 1px solid red;
+  color: red;
+  background-color: white;
+}
+
+.nerd-error__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5em;
+}
+
+.nerd-error__title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.nerd-error__message {
+  margin-top: 0.5em;
+  color: gray;
+  font-size: 0.8em;
+}
+
+.nerd-error__close-icon {
+  width: 1.25rem; /* w-5 in Tailwind */
+  height: 1.25rem; /* h-5 in Tailwind */
+  fill: currentColor;
+  color: gray;
+}
