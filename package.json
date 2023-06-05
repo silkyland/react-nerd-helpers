@@ -1,10 +1,10 @@
 {
-  "name": "npm-react-typescript-template",
-  "version": "1.0.0",
-  "description": "A template for publishing a React + TypeScript package to npm",
-  "author": "ovieokeh",
-  "license": "Apache-2.0",
-  "repository": "ovieokeh/npm-react-typescript-template",
+  "name": "@silkyland/react-nerd-helpers",
+  "version": "0.1.0-beta",
+  "description": "React Nerd Helpers is a lightweight React library providing essential UI helper components such as error handlers and loading indicators to streamline application development.",
+  "author": "Bundit Nuntates",
+  "license": "MIT",
+  "repository": "silkyland/react-nerd-helpers",
   "main": "dist/index.js",
   "type": "module",
   "engines": {
