@@ -46,3 +46,7 @@ typings/
 
 # generate output
 dist
+
+# example output
+example/dist
+example/node_modules

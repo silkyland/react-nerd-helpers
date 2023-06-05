@@ -31,7 +31,7 @@ const DefaultSpinner = (
  * Interface for the NerdLoadingProps.
  * Props for the NerdLoading component.
  *
- * @param {string} message - Custom loading message to be displayed. Default value is 'กำลังโหลด...'.
+ * @param {string} message - Custom loading message to be displayed. Default value is 'Loading...'.
  * @param {boolean} visible - Controls whether the loading component should be visible or not. Default value is true.
  * @param {React.ReactNode} spinner - Element for a custom spinner component. By default, uses an SVG spinner provided within NerdLoading.
  */
@@ -48,7 +48,7 @@ interface NerdLoadingProps {
  * @module NerdLoading
  */
 const NerdLoading: React.FC<NerdLoadingProps> = ({
-  message = 'กำลังโหลด...', // Default loading message.
+  message = 'Loading...', // Default loading message.
   visible = true, // Default visibility.
   spinner = DefaultSpinner, // Default spinner component.
 }) => {

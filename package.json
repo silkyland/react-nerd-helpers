@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": "silkyland/react-nerd-helpers",
   "main": "dist/index.js",
-  "type": "module",
+  "type": "commonjs",
   "engines": {
     "node": ">=8",
     "npm": ">=5"
